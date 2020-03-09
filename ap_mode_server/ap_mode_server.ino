@@ -121,13 +121,13 @@ void configure_inputs() {
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
-   }
-  
+  }
+
   Serial.println("");
   Serial.println("WiFi connected");
-  server.send(200, "text/html", "Successfully Connected to SSID - "+ssid);
+  server.send(200, "text/html", "Successfully Connected to SSID - " + ssid);
   server.begin();
-  }
+}
 
 String SendHTML(uint8_t led1stat, uint8_t led2stat) {
   String ptr = "<!DOCTYPE html> <html>\n";
